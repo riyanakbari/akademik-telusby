@@ -8,55 +8,251 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- Main Wrapper -->
-    <section class="w-full h-full flex flex-col items-center">
-
-      <!-- Sticky Floating Navbar -->
-      <nav class="fixed top-10 w-[90%] items-center bg-white rounded-lg shadow-lg z-50">
-        <div class="px-6 py-4">
-          <div class="flex items-center justify-between mx-10">
-            <!-- Logo -->
-            <div class="flex items-center">
-              <img class="w-auto h-10" src="/assets/img/logo_akd.png" alt="logo">
-            </div>
-            <!-- Navigation Links -->
-            <div class="flex items-center gap-8">
-              <a href="/beranda" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="academics" id="link-academics">Beranda</a>
-              <a href="/profil" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="admissions" id="link-admissions">Profil</a>
-              <a href="/dokumen" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="beranda" id="link-beranda">Dokumen</a>
-              <a href="/direktori" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="campus" id="link-campus">Direktori</a>
-              <a href="/layanan" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="about" id="link-about">Layanan</a>
-            </div>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-10 w-[90%] items-center bg-white rounded-lg shadow-lg z-50">
+      <div class="px-6 py-4">
+        <div class="flex items-center justify-between mx-10">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <img class="w-auto h-10" src="/assets/img/logo_akd.png" alt="logo">
+          </div>
+          <!-- Navigation Links -->
+          <div class="flex items-center gap-8">
+            <a href="/" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="beranda" id="link-beranda">Beranda</a>
+            <a href="/profil" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="profil" id="link-profil">Profil</a>
+            <a href="/dokumen" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="dokumen" id="link-dokumen">Dokumen</a>
+            <a href="/direktori" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="direktori" id="link-direktori">Direktori</a>
+            <a href="/layanan" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="layanan" id="link-layanan">Layanan</a>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <!-- Hero Section -->
-      <section class="w-full flex items-center justify-center bg-[url('/assets/img/hero_bg.png')] bg-no-repeat bg-[position:95px_145px] bg-[length:600px_auto]">
-        <div class="container mx-20 px-20 flex flex-col md:flex-row items-center justify-between">
-          <!-- Text Left -->
-          <div class="w-full">
-            <h1 class="text-5xl font-extrabold leading-tight text-black mb-8">
-              Bagian Akademik <br>
-              <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(to right, oklch(0.52 0.24 28.66), oklch(0.33 0.09 21.81));">
-                Universitas Telkom Surabaya
-              </span>
-            </h1>
-            <p class="text-gray-600 w-1/2 mb-8">
-              Mengelola administrasi akademik yang mencakup kegiatan layanan administrasi akademik, pusat bahasa, dan perpustakaan
-            </p>
-            <button class="w-[20%] bg-white outline outline-gray-300 text-red-900 px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition duration-200">
-              Lihat Layanan
+    <!-- Hero Section -->
+    <section class="w-full flex items-center justify-center bg-[url('/assets/img/hero_bg.png')] bg-no-repeat bg-[position:95px_140px] bg-[length:600px_auto] mb-10">
+      <div class="container mx-20 px-20 flex flex-col md:flex-row items-center justify-between">
+        <!-- Text Left -->
+        <div class="w-full">
+          <h1 class="text-5xl font-extrabold leading-[1.5] text-black mb-8"> Bagian Akademik <br>
+            <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(to right, oklch(0.52 0.24 28.66), oklch(0.33 0.09 21.81));"> Universitas Telkom Surabaya</span>
+          </h1>
+          <p class="text-gray-600 w-1/2 mb-8">Mengelola administrasi akademik yang mencakup kegiatan layanan administrasi akademik, pusat bahasa, dan perpustakaan</p>
+          <button class="w-[20%] bg-white outline outline-gray-300 text-red-900 px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition duration-200">
+            Lihat Layanan
+          </button>
+        </div>
+        <!-- Image Right -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img src="/assets/img/hero_img.png" alt="hero-image" class="max-w-xs md:max-w-md w-full h-auto">
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Events Section -->
+    <section class="flex flex-col items-center justify-center mb-20">
+      <div class="container flex flex-col md:flex-row items-center justify-between my-10">
+        <div class="w-full flex flex-col items-center justify-center">
+          <h1 class="text-4xl font-extrabold leading-tight mb-4" style="color: var(--primary-color)">Kalender Acara</h1>
+          <p class="text-xl text-black font-semibold mb-8">Tahun Ajaran 2024/2025</p>
+          
+          <!-- Grid Container -->
+          <div class="flex items-center justify-center gap-4">
+            <button id="prevBtn" class="w-10 h-10 flex items-center justify-center bg-white outline outline-gray-300 text-red-900 rounded-full hover:bg-red-700 hover:text-white transition duration-200">
+              &lt;
+            </button>
+            <div class="overflow-hidden w-[1250px]"> 
+              <div id="slider" class="flex transition-transform duration-300 ease-in-out gap-6">
+                <!-- Card 1 -->
+                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="p-6">
+                    <div class="flex items-center mb-4">
+                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 1</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 items-center">
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                      <p class="text-gray-600">16 Sept 2024 - 4 Jan 2025</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Registrasi dan Perwalian Mala Prodi Reguler 2024 - 2</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 items-center">
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                      <p class="text-gray-600">20 - 24 Januari 2025</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 items-center">
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                      <p class="text-gray-600">17 Februari - 20 Juni 2025</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 items-center">
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                      <p class="text-gray-600">17 Februari - 20 Juni 2025</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="p-6">
+                    <div class="flex items-center space-x-2 mb-4">
+                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 items-center">
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                      <p class="text-gray-600">17 Februari - 20 Juni 2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+              
+            </div>
+            <button id="nextBtn" class="w-10 h-10 flex items-center justify-center bg-white outline outline-gray-300 text-red-900 rounded-full hover:bg-red-700 hover:text-white transition duration-200 ">
+              &gt;
             </button>
           </div>
-          <!-- Image Right -->
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img src="/assets/img/hero_img.png" alt="hero-image" class="max-w-xs md:max-w-md w-full h-auto">
+          <!-- Slider Dots -->
+          <div class="flex justify-center items-center gap-2 mt-6">
           </div>
         </div>
-      </section>
-
+      </div>
     </section>
+
+    <!-- Academic Calendar Section -->
+    <section class="flex justify-center items-center my-10">
+      <div class="text-card-foreground flex flex-col rounded-xl border h-100 w-330 justify-end" style="background-image: linear-gradient(to top, oklch(0.95 0.03 17.21), white);">
+        <div class="flex justify-center gap-20 mx-20 items-center">
+          <div class="flex items-end">
+            <img src="/assets/img/kalender_img.png" alt="logo" class="w-140 h-auto">
+          </div>
+          <div class="w-[40%] flex flex-col justify-center pb-6">
+            <h1 class="text-4xl font-extrabold leading-tight mb-2" style="color: var(--primary-color)">Kalender Akademik</h1>
+            <p class="text-xl text-black font-semibold mb-8">Tahun Ajaran 2024/2025</p>
+            <p class="text-gray-600 pb-6" >Kalender akademik yang ditetapkan oleh Rektor berfungsi sebagai acuan utama dalam penyusunan jadwal kegiatan akademik dan non-akademik.</p>
+            <button class="w-[30%] bg-white outline outline-gray-300 text-red-900 px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition duration-200">
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="flex justify-center items-center my-20 py-15 relative bg-[url('/assets/img/berita_bg.png')] bg-no-repeat bg-[position:0_70px] bg-contain">
+        <div class="absolute inset-0 bg-white/80"></div>
+        <div class="flex flex-col gap-2 mx-20 relative z-10">
+          <div class="flex flex-col items-center">
+            <h1 class="text-4xl font-extrabold leading-tight mb-2" style="color: var(--primary-color)">Berita Terbaru</h1>
+            <p class="text-xl text-black font-semibold mb-8">Acara dan Aktivitas Akademik</p>
+          </div>
+          <div class="flex flex-row gap-12 mx-10">
+            <!-- Card 1 -->
+            <div class="w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border shadow-sm h-full hover:shadow-lg transition-shadow bg-white">
+              <div class="p-6">
+                <div class="flex items-center pb-4">
+                  <img src="/assets/img/berita_1.png" alt="logo" class="w-100 h-100 rounded-xl">
+                </div>
+                <div class="flex items-center mb-4">
+                  <h3 class="font-bold text-lg" style="color: var(--primary-color)">Peringatan Hari Jadi Telkom University Surabaya</h3>
+                </div>
+                <div class="flex flex-wrap gap-2 items-center mb-4">
+                  <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                  <p class="text-gray-600">Senin, 12 Juli 2024</p>
+                </div>
+                <div class="flex items-center pb-4">
+                  <p class="text-gray-600">Pada hari Senin, 12 Juli 2024 akademik melaksanakan sosialisasi untuk...</p>
+                </div>
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-2">
+                    <iconify-icon icon="mdi:pencil-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                    <p class="text-gray-900">Riyan Akbari</p>
+                  </div>
+                  <button class="w-[40%] bg-white outline outline-gray-300 text-red-900 px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition duration-200">Lihat Berita</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border shadow-sm h-full hover:shadow-lg transition-shadow bg-white">
+              <div class="p-6">
+                <div class="flex items-center pb-4">
+                  <img src="/assets/img/berita_2.png" alt="logo" class="w-100 h-100 rounded-xl">
+                </div>
+                <div class="flex items-center mb-4">
+                  <h3 class="font-bold text-lg" style="color: var(--primary-color)">Peringatan Hari Jadi Telkom University Surabaya</h3>
+                </div>
+                <div class="flex flex-wrap gap-2 items-center mb-4">
+                  <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                  <p class="text-gray-600">Senin, 12 Juli 2024</p>
+                </div>
+                <div class="flex items-center pb-4">
+                  <p class="text-gray-600">Para civitas akademika memperingati hari jadi telkom university surabaya...</p>
+                </div>
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-2">
+                    <iconify-icon icon="mdi:pencil-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                    <p class="text-gray-900">Riyan Akbari</p>
+                  </div>
+                  <button class="w-[40%] bg-white outline outline-gray-300 text-red-900 px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition duration-200">Lihat Berita</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border shadow-sm h-full hover:shadow-lg transition-shadow bg-white">
+              <div class="p-6">
+                <div class="flex items-center pb-4">
+                  <img src="/assets/img/berita_3.png" alt="logo" class="w-100 h-100 rounded-xl">
+                </div>
+                <div class="flex items-center mb-4">
+                  <h3 class="font-bold text-lg" style="color: var(--primary-color)">Peringatan Hari Jadi Telkom University Surabaya</h3>
+                </div>
+                <div class="flex flex-wrap gap-2 items-center mb-4">
+                  <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                  <p class="text-gray-600">Senin, 12 Juli 2024</p>
+                </div>
+                <div class="flex items-center pb-4">
+                  <p class="text-gray-600">Pemaparan tentang migrasi aplikasi dengan Telkom University...</p>
+                </div>
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-2">
+                    <iconify-icon icon="mdi:pencil-outline" class="text-red-900" width="20" height="20"></iconify-icon>
+                    <p class="text-gray-900">Riyan Akbari</p>
+                  </div>
+                  <button class="w-[40%] bg-white outline outline-gray-300 text-red-900 px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition duration-200">Lihat Berita</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </section>
+    
     <script type="module" src="/src/main.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
   </body>
 </html>
