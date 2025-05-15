@@ -29,9 +29,27 @@ window.addEventListener('DOMContentLoaded', () => {
     const dotsContainer = document.querySelector('.flex.justify-center.items-center.gap-2.mt-6');
     let currentIndex = 0;
     const cardsPerView = 3;
-    const cardWidth = 400; // Width of each card
-    const gap = 24; // 6 * 4px (gap-6 in Tailwind is 1.5rem = 24px)
-  
+    
+    // Get the current screen width
+    const screenWidth = window.innerWidth;
+    
+    // Set responsive card width and gap based on screen size
+    let cardWidth;
+    let gap;
+    if (screenWidth >= 1280) { // xl
+        cardWidth = 400;
+        gap = 24; // gap-6
+    } else if (screenWidth >= 1024) { // lg
+        cardWidth = 250;
+        gap = 20; // gap-5
+    } else if (screenWidth >= 768) { // md
+        cardWidth = 250;
+        gap = 16; // gap-4
+    } else { // sm and below
+        cardWidth = 200;
+        gap = 12; // gap-3
+    }
+    
     // Create dots based on number of possible slides (4 cards - 3 visible + 1 = 2 possible positions)
     dotsContainer.innerHTML = ''; // Clear existing dots
     for (let i = 0; i < 3; i++) {
@@ -86,4 +104,31 @@ window.addEventListener('DOMContentLoaded', () => {
   
     // Initialize dots
     updateSlider();
+
+    // Function to update card width and gap based on screen size
+    function updateCardWidth() {
+        const screenWidth = window.innerWidth;
+        
+        if (screenWidth >= 1280) { // xl
+            cardWidth = 400;
+            gap = 24; // gap-6
+        } else if (screenWidth >= 1024) { // lg
+            cardWidth = 250;
+            gap = 20; // gap-5
+        } else if (screenWidth >= 768) { // md
+            cardWidth = 250;
+            gap = 16; // gap-4
+        } else { // sm and below
+            cardWidth = 200;
+            gap = 12; // gap-3
+        }
+        
+      
+    }
+
+    // Add resize event listener
+    window.addEventListener('resize', updateCardWidth);
+
+    // Initial card width setup
+    updateCardWidth();
   });

@@ -14,10 +14,10 @@
         <div class="flex items-center justify-between mx-4 sm:mx-6 md:mx-10">
           <!-- Logo -->
           <div class="flex items-center">
-            <img class="w-auto h-8 sm:h-9 md:h-10" src="./assets/img/logo_akd.png" alt="logo">
+            <img class="w-auto xl:h-12 sm:h-9 md:h-10 lg:h-7" src="./assets/img/logo_akd.png" alt="logo">
           </div>
           <!-- Navigation Links -->
-          <div class="flex items-center gap-8 lg:gap-4">
+          <div class="flex items-center gap-8 lg:gap-2 xl:gap-6 lg:text-xs lg:h-5 xl:text-lg">
             <a href="/" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="beranda" id="link-beranda">Beranda</a>
             <a href="/profil" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="profil" id="link-profil">Profil</a>
             <a href="/dokumen" class="nav-link px-3 rounded-full text-gray-700 hover:text-red-600 transition duration-200" data-page="dokumen" id="link-dokumen">Dokumen</a>
@@ -32,12 +32,12 @@
     <section class="w-full flex items-center justify-center bg-no-repeat xl:bg-[position:35px_130px] 2xl:bg-[position:35px_150px] lg:bg-[position:30px_75px] bg-[length:600px_auto] 2xl:bg-[length:600px_auto] xl:bg-[length:600px_auto] lg:bg-[length:400px_auto] bg-[position:35px_75px] mb-10" style="background-image: url('assets/img/hero_bg.png');">
       <div class="container xl:mx-20 xl:px-5 lg:mx-20 flex flex-col md:flex-row items-center justify-between">
         <!-- Text Left -->
-        <div class="xl:w-full lg:pt-12 2xl:pt-0">
+        <div class="xl:w-full lg:pt-5 2xl:pt-0">
           <h1 class="xl:text-5xl lg:text-3xl lg:leading-[1.5] font-extrabold xl:leading-[1.5] text-black mb-8 lg:mb-4"> Bagian Akademik <br>
             <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(to right, oklch(0.52 0.24 28.66), oklch(0.33 0.09 21.81));"> Universitas Telkom Surabaya</span>
           </h1>
-          <p class="text-gray-600 xl:w-[55%] mb-8 lg:text-sm 2xl:text-lg">Mengelola administrasi akademik yang mencakup kegiatan layanan administrasi akademik, pusat bahasa, dan perpustakaan</p>
-          <button class="w-[20%] lg:w-[25%] lg:text-sm bg-white outline outline-gray-300 text-red-900 px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition duration-200">
+          <p class="text-gray-600 xl:w-[55%] mb-8 lg:text-xs 2xl:text-lg lg:w-[60%] xl:text-lg">Mengelola administrasi akademik yang mencakup kegiatan layanan administrasi akademik, pusat bahasa, dan perpustakaan</p>
+          <button class="w-[20%] lg:w-[30%] lg:text-sm bg-white outline outline-gray-300 text-red-900 px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition duration-200">
             Lihat Layanan
           </button>
         </div>
@@ -52,77 +52,77 @@
     <section class="flex flex-col items-center justify-center mb-20">
       <div class="container flex flex-col md:flex-row items-center justify-between my-10">
         <div class="w-full flex flex-col items-center justify-center">
-          <h1 class="text-4xl font-extrabold leading-tight mb-4" style="color: var(--primary-color)">Kalender Acara</h1>
-          <p class="text-xl text-black font-semibold mb-8">Tahun Ajaran 2024/2025</p>
+          <h1 class="xl:text-4xl lg:text-2xl font-extrabold leading-tight xl:mb-4 lg:mb-2" style="color: var(--primary-color)">Kalender Acara</h1>
+          <p class="xl:text-xl lg:text-md text-black font-semibold mb-8">Tahun Ajaran 2024/2025</p>
           
           <!-- Grid Container -->
-          <div class="flex items-center justify-center gap-4">
+          <div class="flex items-center justify-center xl:gap-6 lg:gap-4">
             <button id="prevBtn" class="w-10 h-10 flex items-center justify-center bg-white outline outline-gray-300 text-red-900 rounded-full hover:bg-red-700 hover:text-white transition duration-200">
               &lt;
             </button>
-            <div class="overflow-hidden w-[1250px]"> 
-              <div id="slider" class="flex transition-transform duration-300 ease-in-out gap-6">
+            <div class="overflow-hidden xl:w-[1250px] lg:w-[790px]"> 
+              <div id="slider" class="flex transition-transform duration-300 ease-in-out xl:gap-6 lg:gap-5">
                 <!-- Card 1 -->
-                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
-                  <div class="p-6">
+                <div class="xl:min-w-[400px] lg:min-w-[250px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border xl:p-6 lg:p-4 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="xl:p-4">
                     <div class="flex items-center mb-4">
-                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 1</h3>
+                      <h3 class="font-semibold xl:text-lg lg:text-sm xl:w-[80%] lg:w-[90%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 1</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 items-center">
-                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
-                      <p class="text-gray-600">16 Sept 2024 - 4 Jan 2025</p>
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="15" height="15"></iconify-icon>
+                      <p class="text-gray-600 xl:text-base lg:text-sm">16 Sept 2024 - 4 Jan 2025</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
-                  <div class="p-6">
-                    <div class="flex items-center space-x-2 mb-4">
-                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Registrasi dan Perwalian Mala Prodi Reguler 2024 - 2</h3>
+                <div class="xl:min-w-[400px] lg:min-w-[250px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border xl:py-6 lg:p-4 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="xl:p-4">
+                    <div class="flex items-center mb-4">
+                      <h3 class="font-semibold xl:text-lg lg:text-sm xl:w-[80%] lg:w-[90%]" style="color: var(--primary-color)">Registrasi dan Perwalian Mala Prodi Reguler 2024 - 2</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 items-center">
-                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
-                      <p class="text-gray-600">20 - 24 Januari 2025</p>
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="15" height="15"></iconify-icon>
+                      <p class="text-gray-600 xl:text-base lg:text-sm">20 - 24 Januari 2025</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
-                  <div class="p-6">
-                    <div class="flex items-center space-x-2 mb-4">
-                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
+                <div class="xl:min-w-[400px] lg:min-w-[250px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border xl:py-6 lg:p-4 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="xl:p-4">
+                    <div class="flex items-center mb-4">
+                      <h3 class="font-semibold xl:text-lg lg:text-sm xl:w-[80%] lg:w-[90%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 items-center">
-                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
-                      <p class="text-gray-600">17 Februari - 20 Juni 2025</p>
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="15" height="15"></iconify-icon>
+                      <p class="text-gray-600 xl:text-base lg:text-sm">17 Februari - 15 Juni 2025</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
-                  <div class="p-6">
-                    <div class="flex items-center space-x-2 mb-4">
-                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
+                <div class="xl:min-w-[400px] lg:min-w-[250px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border xl:py-6 lg:p-4 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="xl:p-4">
+                    <div class="flex items-center mb-4">
+                      <h3 class="font-semibold xl:text-lg lg:text-sm xl:w-[80%] lg:w-[90%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 items-center">
-                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
-                      <p class="text-gray-600">17 Februari - 20 Juni 2025</p>
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="15" height="15"></iconify-icon>
+                      <p class="text-gray-600 xl:text-base lg:text-sm">17 Februari - 20 Juni 2025</p>
                     </div>
                   </div>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="min-w-[400px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm h-full hover:shadow-md transition-shadow">
-                  <div class="p-6">
-                    <div class="flex items-center space-x-2 mb-4">
-                      <h3 class="font-semibold text-lg w-[80%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
+                <!-- Card 5 -->
+                <div class="xl:min-w-[400px] lg:min-w-[250px] bg-card text-card-foreground flex flex-col gap-6 rounded-xl border xl:py-6 lg:p-4 shadow-sm h-full hover:shadow-md transition-shadow">
+                  <div class="xl:p-4">
+                    <div class="flex items-center mb-4">
+                      <h3 class="font-semibold xl:text-lg lg:text-sm xl:w-[80%] lg:w-[90%]" style="color: var(--primary-color)">Minggu Perkuliahan dan Asesmen 2024 - 2</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 items-center">
-                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="20" height="20"></iconify-icon>
-                      <p class="text-gray-600">17 Februari - 20 Juni 2025</p>
+                      <iconify-icon icon="mdi:calendar-outline" class="text-red-900" width="15" height="15"></iconify-icon>
+                      <p class="text-gray-600 xl:text-base lg:text-sm">17 Februari - 20 Juni 2025</p>
                     </div>
                   </div>
                 </div>
