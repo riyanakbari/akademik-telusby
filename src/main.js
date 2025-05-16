@@ -70,10 +70,12 @@ window.addEventListener('DOMContentLoaded', () => {
       dots.forEach((dot, index) => {
         if (index === currentIndex) {
           dot.classList.remove('bg-gray-300');
-          dot.classList.add('bg-red-900', 'w-10');
+          dot.classList.add('bg-red-900');
+          dot.classList.replace('w-4', 'w-10');
         } else {
-          dot.classList.remove('bg-red-900', 'w-10');
+          dot.classList.remove('bg-red-900');
           dot.classList.add('bg-gray-300');
+          dot.classList.replace('w-10', 'w-4');
         }
       });
     };
