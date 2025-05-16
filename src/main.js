@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const cards = slider.querySelectorAll('div');
-    const dotsContainer = document.querySelector('.flex.justify-center.items-center.gap-2.mt-8');
+    const dotsContainer = document.querySelector('.flex.justify-center.items-center.gap-4.mt-8');
     let currentIndex = 0;
     const cardsPerView = 3;
     
@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     dotsContainer.innerHTML = ''; // Clear existing dots
     for (let i = 0; i < 3; i++) {
       const dot = document.createElement('button');
-      dot.className = 'slider-dot rounded-full bg-gray-300 transition-all duration-300';
+      dot.className = 'slider-dot rounded-full bg-gray-300 transition-all duration-300 w-4 h-4';
       dot.setAttribute('data-index', i);
       dotsContainer.appendChild(dot);
     }
@@ -70,9 +70,9 @@ window.addEventListener('DOMContentLoaded', () => {
       dots.forEach((dot, index) => {
         if (index === currentIndex) {
           dot.classList.remove('bg-gray-300');
-          dot.classList.add('bg-red-900', 'w-10', 'h-6');
+          dot.classList.add('bg-red-900', 'w-10');
         } else {
-          dot.classList.remove('bg-red-900', 'w-10', 'h-6');
+          dot.classList.remove('bg-red-900', 'w-10');
           dot.classList.add('bg-gray-300');
         }
       });
