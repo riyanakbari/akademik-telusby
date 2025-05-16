@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const cards = slider.querySelectorAll('div');
-    const dotsContainer = document.querySelector('.flex.justify-center.items-center.gap-2.mt-6');
+    const dotsContainer = document.querySelector('.flex.justify-center.items-center.gap-2.mt-8');
     let currentIndex = 0;
     const cardsPerView = 3;
     
@@ -70,9 +70,9 @@ window.addEventListener('DOMContentLoaded', () => {
       dots.forEach((dot, index) => {
         if (index === currentIndex) {
           dot.classList.remove('bg-gray-300');
-          dot.classList.add('bg-red-900', 'w-4');
+          dot.classList.add('bg-red-900', 'w-10', 'h-6');
         } else {
-          dot.classList.remove('bg-red-900', 'w-4');
+          dot.classList.remove('bg-red-900', 'w-10', 'h-6');
           dot.classList.add('bg-gray-300');
         }
       });
